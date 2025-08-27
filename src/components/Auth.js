@@ -1,4 +1,6 @@
 // src/components/Auth.js
+import { db } from "../firebase";
+import { doc, setDoc, getDoc } from "firebase/firestore";
 import React, { useState } from "react";
 import { auth } from "../firebase";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
@@ -13,8 +15,14 @@ export default function Auth({ user, setUser }) {
     e.preventDefault();
     try {
       if (isSignIn) {
-        const userCred = await signInWithEmailAndPassword(auth, email, password);
+        const userCred = await createUserWithEmailAndPassword(auth, email, password);
+// Create user's approval status
+        await setDoc(doc(db, "users", userCred.user.uid), {
+         email: userCred.user.email,
+         approved: false
+        });
         setUser(userCred.user);
+
       } else {
         const userCred = await createUserWithEmailAndPassword(auth, email, password);
         setUser(userCred.user);
