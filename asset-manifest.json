@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/antibody-inventory-react/static/css/main.e6c13ad2.css",
+    "main.js": "/antibody-inventory-react/static/js/main.3db126b0.js",
+    "static/js/453.efafe11a.chunk.js": "/antibody-inventory-react/static/js/453.efafe11a.chunk.js",
+    "index.html": "/antibody-inventory-react/index.html",
+    "main.e6c13ad2.css.map": "/antibody-inventory-react/static/css/main.e6c13ad2.css.map",
+    "main.3db126b0.js.map": "/antibody-inventory-react/static/js/main.3db126b0.js.map",
+    "453.efafe11a.chunk.js.map": "/antibody-inventory-react/static/js/453.efafe11a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.3db126b0.js"
+  ]
+}
